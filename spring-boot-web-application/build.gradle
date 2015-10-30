@@ -57,3 +57,7 @@ tasks.withType(Test) {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.8'
 }
+
+jar {
+    archiveName = "${rootProject.name}.jar"
+}

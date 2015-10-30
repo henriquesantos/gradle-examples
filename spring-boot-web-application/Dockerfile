@@ -1,11 +1,7 @@
 FROM java:8-jdk
 
-ADD . /app
-
-WORKDIR /app
-
-RUN ./gradlew clean build
+ADD build/libs/spring-boot-web-application.jar .
 
 EXPOSE 8080
 
-ENTRYPOINT ["java -jar build/libs/spring-boot-web-application.jar"]
+ENTRYPOINT ['java', '-jar', 'spring-boot-web-application.jar']
